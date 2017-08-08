@@ -3,14 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_cqRkXwwDZfNb_f0DfMJzWGgHZSr4mU"></script>
   </head>
-  <%- defineContent('layout') %>
+  <section class="hero is-dark">
+  <div class="hero-body">
+    <div class="hero-container">
+      <h1 class="title">
+        PoliceWatch
+      </h1>
+      <h2 class="subtitle">
+        Visualizing Officer-Involved Deaths (2015-2016)
+      </h2>
+    </div>
+  </div>
+</section>
+<nav class="breadcrumb" aria-label="breadcrumbs">
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Resources</a></li>
+</ul>
+</nav>
   <body>
     <div class='container is-fluid'>
-        <%- body %>
+      <%- body %>
     </div>
   </body>
   <footer class="footer">
