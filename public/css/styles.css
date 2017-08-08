@@ -22,3 +22,12 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.source-link {
+  margin-top: 20px;
+}
+
+.footer {
+  padding-bottom: 3em;
+  margin-top: 1em;
+}
