@@ -10,10 +10,10 @@ module.exports = router;
 
 // route for homepage
 router.get('/', function(req,res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.render('pages/index');
 });
 
 // route for about page
 router.get('/about', function(req,res) {
-  res.sendFile(path.join(__dirname, '../about.html'));
+  res.render('pages/about');
 });
