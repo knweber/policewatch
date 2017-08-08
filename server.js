@@ -2,6 +2,7 @@
 
 // require our dependencies
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
 var app = express();
 var port = 8080;
 
@@ -9,7 +10,12 @@ var port = 8080;
 var router = require('./app/routes');
 app.use('/', router);
 
-// set static files (css and images)
+// use ejs and express layouts
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+
+// set static files (css and images) location
+app.use(express.static(__dirname + '/public'));
 
 // start server
 app.listen(port, function() {
