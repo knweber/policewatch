@@ -7,14 +7,25 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_cqRkXwwDZfNb_f0DfMJzWGgHZSr4mU"></script>
   </head>
+  <%- defineContent('layout') %>
   <body>
-    <%- defineContent('layout') %>
-
-    <main>
-      <div class="container">
+    <div class='container is-fluid'>
         <%- body %>
-      </div>
-    </main>
-
+    </div>
   </body>
+  <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>PoliceWatch</strong> by <a href="http://jgthms.com">Joel Guerra</a> and
+        <a href="http://opensource.org/licenses/mit-license.php">Kris Weber</a>
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/jgthms/bulma">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
 </html>
