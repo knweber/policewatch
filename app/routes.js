@@ -13,6 +13,11 @@ router.get('/', function(req,res) {
   res.render('pages/index');
 });
 
+// test
+router.get('/test', function(req,res) {
+  res.render('pages/test');
+});
+
 // route for about page
 router.get('/about', function(req,res) {
   res.render('pages/about');
