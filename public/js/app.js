@@ -48,7 +48,3 @@ function initMap() {
        {lat: -42.735258, lng: 147.438000},
        {lat: -43.999792, lng: 170.463352}
      ]
-
-     $(document).ready(function(){
-       initMap();
-     })
