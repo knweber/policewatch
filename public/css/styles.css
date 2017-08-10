@@ -43,3 +43,8 @@ html, body {
   height: 600px;
   margin: 0 auto;
 }
+
+.page-container {
+  margin: 0 auto 150px;
+  width: 800px;
+}

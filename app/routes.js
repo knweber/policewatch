@@ -13,9 +13,8 @@ router.get('/', function(req,res) {
   res.render('pages/index');
 });
 
-// test
-router.get('/test', function(req,res) {
-  res.render('pages/test');
+router.get('/resources', function(req,res) {
+  res.render('pages/resources');
 });
 
 // route for about page
