@@ -8,7 +8,7 @@ var app = express();
 var port = 8080;
 
 // use ejs and express layouts
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // route the app
@@ -17,7 +17,6 @@ app.use('/', router);
 
 // set static files (css and images) location
 app.use(express.static(__dirname + '/public'));
-app.use('/');
 
 // start server
 app.listen(port, function() {

@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": "https://github.com/knweber/policewatch.git",
   "dependencies": {
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
