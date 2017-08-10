@@ -5,7 +5,6 @@ require('dotenv').config()
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 var app = express();
-var port = 8080;
 
 // use ejs and express layouts
 app.set('view engine', 'ejs');
@@ -19,6 +18,6 @@ app.use('/', router);
 app.use(express.static(__dirname + '/public'));
 
 // start server
-app.listen(port, function() {
+app.listen(process.env.PORT || 8080, function() {
   console.log('app started');
 });
