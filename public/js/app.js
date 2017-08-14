@@ -36,6 +36,8 @@ function populateMarkers(dataType) {
                 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
             });
 
+            var race = this.race;
+
             var content = 'Name: ' + this.name +
                         '<br>Age: ' + this.age +
                         '<br>Sex: ' + this.sex +
@@ -61,47 +63,19 @@ function populateMarkers(dataType) {
     });
 };
 
-$(document).on('click', '#black-filter', function(){
-	$.each(map.markers, function(i, marker) {
-        if(marker.infowindow.content.includes('Black'))
-            marker.setVisible(true);
-        else
-            marker.setVisible(false);
-    });
-});
-
-$(document).on('click', '#white-filter', function(){
-	$.each(map.markers, function(i, marker) {
-        if(marker.infowindow.content.includes('White'))
-            marker.setVisible(true);
-        else
-            marker.setVisible(false);
-    });
-});
-
-$(document).on('click', '#hispanic-filter', function(){
-	$.each(map.markers, function(i, marker) {
-        if(marker.infowindow.content.includes('Hispanic/Latino'))
-            marker.setVisible(true);
-        else
-            marker.setVisible(false);
-    });
-});
-
-$(document).on('click', '#native-filter', function(){
-	$.each(map.markers, function(i, marker) {
-        if(marker.infowindow.content.includes('Native American'))
-            marker.setVisible(true);
-        else
-            marker.setVisible(false);
-    });
-});
-
-$(document).on('click', '#asian-filter', function(){
-	$.each(map.markers, function(i, marker) {
-        if(marker.infowindow.content.includes('Asian/Pacific Islander'))
-            marker.setVisible(true);
-        else
-            marker.setVisible(false);
-    });
-});
+$(document).on('click', function(){
+filterMarkers = function (race) {
+    for (i = 0; i < MAPAPP.markers.length; i++) {
+        var point = MAPAPP.markers[i];
+        // If is same category or category not picked
+        if (point.race.includes(race)) {
+            point.setVisible(true);
+            console.log('hello');
+        }
+        // Categories don't match
+        else {
+            point.setVisible(false);
+        }
+    }
+}
+})

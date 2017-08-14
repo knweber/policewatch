@@ -3,26 +3,12 @@
     </script>
 <script src="/js/app.js"></script>
 <h4>Filter by Race<h4>
-<form>
-  <div>
-    <input type="checkbox" id="white-filter" name="race">
-    <label for="white-filter">White</label>
-  </div>
-  <div>
-    <input type="checkbox" id="black-filter" name="race">
-    <label for="black-filter">Black</label>
-  </div>
-  <div>
-    <input type="checkbox" id="hispanic-filter" name="race">
-    <label for="hispanic-filter">Hispanic/Latino</label>
-  </div>
-  <div>
-    <input type="checkbox" id="native-filter" name="race">
-    <label for="native-filter">Native American</label>
-  </div>
-  <div>
-    <input type="checkbox" id="asian-filter" name="race">
-    <label for="asian-filter">Asian/Pacific Islander</label>
-  </div>
-</form>
+  <select id="type" onchange="filterMarkers(this.value);">
+    <option value="">Please select category</option>
+    <option id="Asian">Asian/Pacific Islander</option>
+    <option id="Black">Black</option>
+    <option id="Hispanic">Hispanic/Latino</option>
+    <option id="Native">Native American</option>
+    <option id="White">White</option>
+  </select>
 <div id="map_canvas"></div>
