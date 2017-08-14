@@ -60,3 +60,48 @@ function populateMarkers(dataType) {
             {imagePath: '/images/m'});
     });
 };
+
+$(document).on('click', '#black-filter', function(){
+	$.each(map.markers, function(i, marker) {
+        if(marker.price <= '80.00')
+            marker.setVisible(false);
+        else
+            marker.setVisible(true);
+    });
+});
+
+$(document).on('click', '#white-filter', function(){
+	$.each(map.markers, function(i, marker) {
+        if(marker.price <= '80.00')
+            marker.setVisible(false);
+        else
+            marker.setVisible(true);
+    });
+});
+
+$(document).on('click', '#hispanic-filter', function(){
+	$.each(map.markers, function(i, marker) {
+        if(marker.price <= '80.00')
+            marker.setVisible(false);
+        else
+            marker.setVisible(true);
+    });
+});
+
+$(document).on('click', '#native-filter', function(){
+	$.each(map.markers, function(i, marker) {
+        if(marker.price <= '80.00')
+            marker.setVisible(false);
+        else
+            marker.setVisible(true);
+    });
+});
+
+$(document).on('click', '#price-filter', function(){
+	$.each(map.markers, function(i, marker) {
+        if(marker.price <= '80.00')
+            marker.setVisible(false);
+        else
+            marker.setVisible(true);
+    });
+});
