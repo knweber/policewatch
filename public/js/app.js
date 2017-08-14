@@ -63,45 +63,45 @@ function populateMarkers(dataType) {
 
 $(document).on('click', '#black-filter', function(){
 	$.each(map.markers, function(i, marker) {
-        if(marker.price <= '80.00')
-            marker.setVisible(false);
-        else
+        if(marker.infowindow.content.includes('Black'))
             marker.setVisible(true);
+        else
+            marker.setVisible(false);
     });
 });
 
 $(document).on('click', '#white-filter', function(){
 	$.each(map.markers, function(i, marker) {
-        if(marker.price <= '80.00')
-            marker.setVisible(false);
-        else
+        if(marker.infowindow.content.includes('White'))
             marker.setVisible(true);
+        else
+            marker.setVisible(false);
     });
 });
 
 $(document).on('click', '#hispanic-filter', function(){
 	$.each(map.markers, function(i, marker) {
-        if(marker.price <= '80.00')
-            marker.setVisible(false);
-        else
+        if(marker.infowindow.content.includes('Hispanic/Latino'))
             marker.setVisible(true);
+        else
+            marker.setVisible(false);
     });
 });
 
 $(document).on('click', '#native-filter', function(){
 	$.each(map.markers, function(i, marker) {
-        if(marker.price <= '80.00')
-            marker.setVisible(false);
-        else
+        if(marker.infowindow.content.includes('Native American'))
             marker.setVisible(true);
+        else
+            marker.setVisible(false);
     });
 });
 
-$(document).on('click', '#price-filter', function(){
+$(document).on('click', '#asian-filter', function(){
 	$.each(map.markers, function(i, marker) {
-        if(marker.price <= '80.00')
-            marker.setVisible(false);
-        else
+        if(marker.infowindow.content.includes('Asian/Pacific Islander'))
             marker.setVisible(true);
+        else
+            marker.setVisible(false);
     });
 });
